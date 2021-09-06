@@ -117,6 +117,11 @@ export default function(hljs) {
     contains: [ NAME ]
   };
 
+  const USING_PARAM_CLAUSE = {
+    className: 'keyword',
+    begin: /(?<=\(\s*)using(?=\s(?!\s*\)))/,
+  };
+
   return {
     name: 'Scala',
     keywords: {
@@ -132,6 +137,7 @@ export default function(hljs) {
       METHOD,
       CLASS,
       hljs.C_NUMBER_MODE,
+      USING_PARAM_CLAUSE,
       ANNOTATION
     ]
   };
